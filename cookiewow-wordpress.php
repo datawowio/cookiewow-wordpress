@@ -75,6 +75,29 @@ function cookiewow_sanitize_settings_fields( $fields ) {
 function cookiewow_settings_section_description() {
 }
 
+function cookiewow_uninstall() {
+	delete_option( 'cookiewow_option' );
+}
+
+function cookiewow_wp_head() {
+	$option = get_option( 'cookiewow_option' );
+
+	if ( ! isset( $option['cookiewow_token'] )
+		|| '' === trim( $option['cookiewow_token'] ) ) {
+		return;
+	}
+
+	$token       = esc_attr( $option['cookiewow_token'] );
+	$script_path = 'https://script.cookiewow.com/cwc.js';
+	$config_path = "https://script.cookiewow.com/configs/{$token}";
+
+	echo sprintf('<!-- Cookie Consent by https://www.cookiewow.com -->
+		<script type="text/javascript" src="%s"></script>
+		<script id="cookieWow" type="text/javascript" src="%s" data-cwcid="%s"></script>', $script_path, $config_path, $token );
+}
+
 add_action( 'admin_init', 'cookiewow_admin_init');
 add_action( 'admin_menu', 'cookiewow_admin_menu' );
 add_action( 'admin_notices', 'cookiewow_admin_notices');
+add_action( 'wp_head', 'cookiewow_wp_head', $priority = 1);
+register_uninstall_hook( __FILE__, 'cookiewow_uninstall' );
