@@ -46,6 +46,10 @@ function cookiewow_admin_menu() {
 	);
 }
 
+function cookiewow_admin_notices() {
+	settings_errors();
+}
+
 function cookiewow_settings_fields() {
 	$option = get_option( 'cookiewow_option' );
 	printf(
@@ -73,3 +77,4 @@ function cookiewow_settings_section_description() {
 
 add_action( 'admin_init', 'cookiewow_admin_init');
 add_action( 'admin_menu', 'cookiewow_admin_menu' );
+add_action( 'admin_notices', 'cookiewow_admin_notices');
