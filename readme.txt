@@ -11,8 +11,8 @@ An easy way to make your website comply with PDPA.
 
 == Description ==
 
-The Cookie Wow WordPress is a WordPress plugin that allow you to easily comply and manage cookie consent.
-It allow you to automatically scan you web page to check your cookie and script, customize how banner look, mange cookie categories, including view and search cookie consent with customer support.
+The Cookie Wow WordPress is a WordPress plugin that allows you to easily comply and manage cookie consent.
+It allows you to automatically scan your web page to check your cookie and script, customize how banner looks, manage cookie categories, including view and search cookie consent with customer support.
 
 == Installation ==
 1. Unpack the download-package.
