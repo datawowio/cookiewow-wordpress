@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Cookie Wow WordPress
  * Plugin URI: https://cookiewow.com/
- * Description:
+ * Description: An easy way to manage cookie consent on web pages.
  * Version: 1.0.0
  * Author: Cookie Wow
  * Author URI: https://cookiewow.com/
