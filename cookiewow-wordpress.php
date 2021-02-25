@@ -18,18 +18,18 @@ function cookiewow_admin_init() {
 	);
 
 	add_settings_section(
-		$id       = 'setting_section_id',
+		$id       = 'cookiewow_setting_section_id',
 		$title    = '',
 		$callback = 'cookiewow_settings_section_description',
 		$page     = 'cookiewow-settings'
 	);
 
 	add_settings_field(
-		$id       = 'token',
+		$id       = 'cookiewow_token',
 		$title    = 'Token',
 		$callback = 'cookiewow_settings_fields',
 		$page     = 'cookiewow-settings',
-		$section  = 'setting_section_id',
+		$section  = 'cookiewow_setting_section_id',
 		$args     = null
 	);
 }
@@ -53,8 +53,8 @@ function cookiewow_admin_notices() {
 function cookiewow_settings_fields() {
 	$option = get_option( 'cookiewow_option' );
 	printf(
-		'<input type="text" id="token" name="cookiewow_option[token]" class="regular-text" value="%s" />',
-		isset( $option['token'] ) ? esc_attr( $option['token']) : ''
+		'<input type="text" id="cookiewow_token" name="cookiewow_option[cookiewow_token]" class="regular-text" value="%s" />',
+		isset( $option['cookiewow_token'] ) ? esc_attr( $option['cookiewow_token']) : ''
 	);
 }
 
@@ -65,8 +65,8 @@ function cookiewow_settings_page() {
 function cookiewow_sanitize_settings_fields( $fields ) {
 	$sanitized_fields = array();
 
-	if ( isset( $fields['token'] ) ) {
-		$sanitized_fields['token'] = sanitize_text_field( ( $fields['token'] ) );
+	if ( isset( $fields['cookiewow_token'] ) ) {
+		$sanitized_fields['cookiewow_token'] = sanitize_text_field( ( $fields['cookiewow_token'] ) );
 	}
 
 	return $sanitized_fields;
