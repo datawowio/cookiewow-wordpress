@@ -75,6 +75,10 @@ function cookiewow_sanitize_settings_fields( $fields ) {
 function cookiewow_settings_section_description() {
 }
 
+function cookiewow_uninstall() {
+	delete_option( 'cookiewow_option' );
+}
+
 function cookiewow_wp_head() {
 	$option = get_option( 'cookiewow_option' );
 
@@ -96,3 +100,4 @@ add_action( 'admin_init', 'cookiewow_admin_init');
 add_action( 'admin_menu', 'cookiewow_admin_menu' );
 add_action( 'admin_notices', 'cookiewow_admin_notices');
 add_action( 'wp_head', 'cookiewow_wp_head', $priority = 1);
+register_uninstall_hook( __FILE__, 'cookiewow_uninstall' );
