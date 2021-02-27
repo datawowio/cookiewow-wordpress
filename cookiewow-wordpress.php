@@ -58,7 +58,7 @@ function cookiewow_settings_fields() {
 	$option = get_option( 'cookiewow_option' );
 	printf(
 		'<input type="text" id="cookiewow_token" name="cookiewow_option[cookiewow_token]" class="regular-text" value="%s" />',
-		isset( $option['cookiewow_token'] ) ? esc_attr( $option['cookiewow_token']) : ''
+		isset( $option['cookiewow_token'] ) ? esc_attr( $option['cookiewow_token'] ) : ''
 	);
 }
 
@@ -100,8 +100,8 @@ function cookiewow_wp_head() {
 		<script id="cookieWow" type="text/javascript" src="%s" data-cwcid="%s"></script>', $script_path, $config_path, $token );
 }
 
-add_action( 'admin_init', 'cookiewow_admin_init');
+add_action( 'admin_init', 'cookiewow_admin_init' );
 add_action( 'admin_menu', 'cookiewow_admin_menu' );
-add_action( 'admin_notices', 'cookiewow_admin_notices');
-add_action( 'wp_head', 'cookiewow_wp_head', $priority = 1);
+add_action( 'admin_notices', 'cookiewow_admin_notices' );
+add_action( 'wp_head', 'cookiewow_wp_head', $priority = 1 );
 register_uninstall_hook( __FILE__, 'cookiewow_uninstall' );
