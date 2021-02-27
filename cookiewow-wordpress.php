@@ -19,39 +19,35 @@
  * Initialize admin settings.
  */
 function cookiewow_admin_init() {
-	register_setting(
-		$option_group = 'cookiewow_settings_fields',
-		$option_name  = 'cookiewow_option',
-		$args         = array( 'sanitize_callback' => 'cookiewow_sanitize_settings_fields' )
-	);
+	$option_group = 'cookiewow_settings_fields';
+	$option_name  = 'cookiewow_option';
+	$args         = array( 'sanitize_callback' => 'cookiewow_sanitize_settings_fields' );
+	register_setting( $option_group, $option_name, $args );
 
-	add_settings_section(
-		$id       = 'cookiewow_setting_section_id',
-		$title    = '',
-		$callback = 'cookiewow_settings_section_description',
-		$page     = 'cookiewow-settings'
-	);
+	$id       = 'cookiewow_setting_section_id';
+	$title    = '';
+	$callback = 'cookiewow_settings_section_description';
+	$page     = 'cookiewow-settings';
+	add_settings_section( $id, $title, $callback, $page );
 
-	add_settings_field(
-		$id       = 'cookiewow_token',
-		$title    = 'Token',
-		$callback = 'cookiewow_settings_fields',
-		$page     = 'cookiewow-settings',
-		$section  = 'cookiewow_setting_section_id',
-		$args     = null
-	);
+	$id       = 'cookiewow_token';
+	$title    = 'Token';
+	$callback = 'cookiewow_settings_fields';
+	$page     = 'cookiewow-settings';
+	$section  = 'cookiewow_setting_section_id';
+	$args     = null;
+	add_settings_field( $id, $title, $callback, $page, $section, $args );
 }
 
 function cookiewow_admin_menu() {
-	add_menu_page(
-		$page_title = 'Cookie Wow Settings',
-		$menu_title = 'Cookie Wow',
-		$capability = 'manage_options',
-		$menu_slug  = 'cookiewow-settings',
-		$function   = 'cookiewow_settings_page',
-		$icon_url   = 'dashicons-admin-plugins',
-		$position   = '25'
-	);
+	$page_title = 'Cookie Wow Settings';
+	$menu_title = 'Cookie Wow';
+	$capability = 'manage_options';
+	$menu_slug  = 'cookiewow-settings';
+	$function   = 'cookiewow_settings_page';
+	$icon_url   = 'dashicons-admin-plugins';
+	$position   = '25';
+	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
 }
 
 function cookiewow_admin_notices() {
