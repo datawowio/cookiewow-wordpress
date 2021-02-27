@@ -1,15 +1,23 @@
 <?php
 /**
+ * Cookie Wow WordPress
+ *
+ * @package cookiewow-wordpress
+ *
+ * @wordpress-plugin
  * Plugin Name: Cookie Wow WordPress
- * Plugin URI: https://cookiewow.com/
+ * Plugin URI:  https://cookiewow.com/
  * Description:
- * Version: 1.0.0
- * Author: Cookie Wow
- * Author URI: https://cookiewow.com/
- * License: GNU General Public License v2 or later
+ * Version:     1.0.0
+ * Author:      Cookie Wow
+ * Author URI:  https://cookiewow.com/
+ * License:     GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
+/**
+ * Initialize admin settings.
+ */
 function cookiewow_admin_init() {
 	register_setting(
 		$option_group = 'cookiewow_settings_fields',
