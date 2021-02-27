@@ -39,6 +39,9 @@ function cookiewow_admin_init() {
 	add_settings_field( $id, $title, $callback, $page, $section, $args );
 }
 
+/**
+ * Add admin menu.
+ */
 function cookiewow_admin_menu() {
 	$page_title = 'Cookie Wow Settings';
 	$menu_title = 'Cookie Wow';
@@ -50,10 +53,16 @@ function cookiewow_admin_menu() {
 	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
 }
 
+/**
+ * Display a notification when an error occurred in updating settings.
+ */
 function cookiewow_admin_notices() {
 	settings_errors();
 }
 
+/**
+ * Display admin settings fields.
+ */
 function cookiewow_settings_fields() {
 	$option = get_option( 'cookiewow_option' );
 	printf(
@@ -62,10 +71,18 @@ function cookiewow_settings_fields() {
 	);
 }
 
+/**
+ * Display admin settings form.
+ */
 function cookiewow_settings_page() {
 	require_once plugin_dir_path( __FILE__ ) . 'settings.php';
 }
 
+/**
+ * Sanitize the setting fields before updating.
+ *
+ * @param string[] $fields The admin settings fields.
+ */
 function cookiewow_sanitize_settings_fields( $fields ) {
 	$sanitized_fields = array();
 
@@ -76,13 +93,22 @@ function cookiewow_sanitize_settings_fields( $fields ) {
 	return $sanitized_fields;
 }
 
+/**
+ * Display description for admin settings form.
+ */
 function cookiewow_settings_section_description() {
 }
 
+/**
+ * Uninstall the plugin.
+ */
 function cookiewow_uninstall() {
 	delete_option( 'cookiewow_option' );
 }
 
+/**
+ * Add JavaScript tag to <head>.
+ */
 function cookiewow_wp_head() {
 	$option = get_option( 'cookiewow_option' );
 
