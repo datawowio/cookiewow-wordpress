@@ -1,7 +1,7 @@
 === Cookie Wow WordPress ===
 Contributors: Cookie Wow
 Tags: cookie, PDPA
-Requires at least:
+Requires at least: 4.9.16
 Tested up to: 5.6.2
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
@@ -11,13 +11,15 @@ An easy way to make your website comply with PDPA.
 
 == Description ==
 
-The Cookie Wow WordPress is a WordPress plugin that allows you to easily comply and manage cookie consent.
-It allows you to automatically scan your web page to check your cookie and script, customize how banner looks, manage cookie categories, including view and search cookie consent with customer support.
+The Cookie Wow WordPress is a WordPress plugin that allows you to easily comply with PDPA.
+It not only allows you to generate and customize a cookie banner. Cookie Wow automatically scans your web page to check the use of cookies and scripts, and block them before receiving consents. You can also manage cookies and categories and view consent statistics which are automatically recorded by Cookie Wow.
 
 == Installation ==
 1. Unpack the download-package.
 2. Upload the file to the /wp-content/plugins/ directory.
 3. Activate the plugin through the Plugins menu in WordPress.
+
+View full installation guide >> (https://cookiewow.crisp.help/th/article/cookie-wow-wordpress-16sumbv/?1614570499387)
 
 == Changelog ==
 
