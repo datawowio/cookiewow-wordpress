@@ -13,24 +13,47 @@
     margin-top: 16px;
 }
 
+.cookiewow-wrap a {
+    color: var(--primary-color-400);
+}
+
+.cookiewow-wrap a:hover {
+    color: var(--primary-color-500);
+}
+
+.cookiewow-wrap a:focus {
+    color: var(--primary-color-500);
+}
+
+.cookiewow-wrap a:active {
+    color: var(--primary-color-600);
+}
+
 .cookiewow-logo {
     height: 64px !important;
     margin: 24px 0;
 }
 
+.cookiewow-howto-container {
+    display: flex;
+    flex-flow: column;
+}
+
 .cookiewow-howto {
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
+    margin: 0 16px;
+    min-width: 360px;
+    max-width: 360px;
+}
+
+.cookiewow-wrap table th {
+    width: 144px;
 }
 
 .cookiewow-wrap table td {
     text-align: center;
     padding: 0;
-}
-
-.cookiewow-howto h1 {
-    text-align: center;
 }
 
 .cookiewow-wrap .submit {
@@ -68,5 +91,13 @@
 
 hr {
     width: calc(100% - 32px);
-    /*border-color: #888888;*/
+}
+
+@media only screen and (min-width: 1024px) {
+    .cookiewow-howto-container {
+        flex-flow: row;
+    }
+    .cookiewow-howto-container hr {
+        display: none;
+    }
 }
