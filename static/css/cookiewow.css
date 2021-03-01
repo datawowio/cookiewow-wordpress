@@ -1,0 +1,72 @@
+.cookiewow-wrap {
+    --primary-color-400: #ea834f;
+    --primary-color-500: #e66f33;
+    --primary-color-600: #9f4213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    background-color: white;
+    border-top: 4px solid var(--primary-color-400);
+    border-radius: 4px;
+    width: calc(100% - 20px);
+    margin-top: 16px;
+}
+
+.cookiewow-logo {
+    height: 64px !important;
+    margin: 24px 0;
+}
+
+.cookiewow-howto {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.cookiewow-wrap table td {
+    text-align: center;
+    padding: 0;
+}
+
+.cookiewow-howto h1 {
+    text-align: center;
+}
+
+.cookiewow-wrap .submit {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: column nowrap;
+    margin: 8px 0;
+}
+
+.cookiewow-wrap input[type="submit"] {
+    height: 36px;
+    padding: 0 16px;
+    font-weight: 700;
+    background-color: var(--primary-color-400);
+    border-color: var(--primary-color-400);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.cookiewow-wrap input[type="submit"]:hover {
+    background-color: var(--primary-color-500);
+    border-color: var(--primary-color-500);
+}
+
+.cookiewow-wrap input[type="submit"]:focus {
+    background-color: var(--primary-color-500);
+    border-color: var(--primary-color-500);
+}
+
+.cookiewow-wrap input[type="submit"]:active {
+    background-color: var(--primary-color-600);
+    border-color: var(--primary-color-600);
+}
+
+hr {
+    width: calc(100% - 32px);
+    /*border-color: #888888;*/
+}

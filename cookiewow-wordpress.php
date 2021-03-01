@@ -26,7 +26,7 @@ function cookiewow_admin_init() {
 
 	add_settings_field(
 		$id       = 'cookiewow_token',
-		$title    = 'Token',
+		$title    = 'Cookie Wow Project ID',
 		$callback = 'cookiewow_settings_fields',
 		$page     = 'cookiewow-settings',
 		$section  = 'cookiewow_setting_section_id',
