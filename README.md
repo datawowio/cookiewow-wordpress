@@ -14,23 +14,23 @@ Before using the plugin, please [sign up a Cookie Wow account](https://app.cooki
 2. Unpack the zip file.
 3. Upload it to the /wp-content/plugins/ directory or using WordPress admin to upload the plugin by following the steps below.
     - From the left side Plugins menu, click Add New.
-    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/docs/installation_01.png"></p>
+    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/blob/main/docs/installation_01.png"></p>
 
     - Click Upload Plugin.
-    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/docs/installation_02.png"></p>
+    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/blob/main/docs/installation_02.png"></p>
 
     - Browse to the plugin zip file, and click Install Now.
-    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/docs/installation_03.png"></p>
+    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/blob/main/docs/installation_03.png"></p>
 
     - After installation is completed, click Activate Plugin.
-    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/docs/installation_04.png"></p>
+    <p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/blob/main/docs/installation_04.png"></p>
 
 More information from [WordPress Codex](https://wordpress.org/support/article/managing-plugins/#installing-plugins) about plugin installation.
 
 ## Configuration
 
 From the left side Cookie Wow menu, put the Cookie Wow domain token and click Save Changes.
-<p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/docs/configuration_01.png"></p>
+<p align="center"><img width="600" src="https://github.com/datawowio/cookiewow-wordpress/blob/main/docs/configuration_01.png"></p>
 
 ## License
 
