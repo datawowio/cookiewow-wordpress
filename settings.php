@@ -25,9 +25,7 @@
                     href="https://cookiewow.com/"
                     target="_blank"
                     rel="norefferer"
-                >
-                    Cookie Wow
-                </a>
+                >Cookie Wow</a>
                 (Or sign up
                     <a
                         href="https://app.cookiewow.com/users/sign_up"
