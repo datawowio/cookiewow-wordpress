@@ -19,7 +19,7 @@ Before using the plugin, please [sign up a Cookie Wow account](https://app.cooki
     - Click Upload Plugin.
     <img width="500" src="https://github.com/datawowio/cookiewow-wordpress/blob/feature/plugin-description/docs/installation_02.png">
 
-    - Click Choose File, browse to the plugin zip file, and click Install Now.
+    - Browse to the plugin zip file, and click Install Now.
     <img width="500" src="https://github.com/datawowio/cookiewow-wordpress/blob/feature/plugin-description/docs/installation_03.png">
 
     - After installation is completed, click Activate Plugin.
