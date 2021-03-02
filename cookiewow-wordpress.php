@@ -31,7 +31,7 @@ function cookiewow_admin_init() {
 	add_settings_section( $id, $title, $callback, $page );
 
 	$id       = 'cookiewow_token';
-	$title    = 'Token';
+	$title    = 'Cookie Banner ID';
 	$callback = 'cookiewow_settings_fields';
 	$page     = 'cookiewow-settings';
 	$section  = 'cookiewow_setting_section_id';

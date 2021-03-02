@@ -1,0 +1,103 @@
+.cookiewow-wrap {
+    --primary-color-400: #ea834f;
+    --primary-color-500: #e66f33;
+    --primary-color-600: #9f4213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    background-color: white;
+    border-top: 4px solid var(--primary-color-400);
+    border-radius: 4px;
+    width: calc(100% - 20px);
+    margin-top: 16px;
+}
+
+.cookiewow-wrap a {
+    color: var(--primary-color-400);
+}
+
+.cookiewow-wrap a:hover {
+    color: var(--primary-color-500);
+}
+
+.cookiewow-wrap a:focus {
+    color: var(--primary-color-500);
+}
+
+.cookiewow-wrap a:active {
+    color: var(--primary-color-600);
+}
+
+.cookiewow-logo {
+    height: 64px !important;
+    margin: 24px 0;
+}
+
+.cookiewow-howto-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.cookiewow-howto {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 16px;
+    min-width: 360px;
+    max-width: 360px;
+}
+
+.cookiewow-wrap table th {
+    width: 144px;
+}
+
+.cookiewow-wrap table td {
+    text-align: center;
+    padding: 0;
+}
+
+.cookiewow-wrap .submit {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-flow: column nowrap;
+    margin: 8px 0;
+}
+
+.cookiewow-wrap input[type="submit"] {
+    height: 36px;
+    padding: 0 16px;
+    font-weight: 700;
+    background-color: var(--primary-color-400);
+    border-color: var(--primary-color-400);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.cookiewow-wrap input[type="submit"]:hover {
+    background-color: var(--primary-color-500);
+    border-color: var(--primary-color-500);
+}
+
+.cookiewow-wrap input[type="submit"]:focus {
+    background-color: var(--primary-color-500);
+    border-color: var(--primary-color-500);
+}
+
+.cookiewow-wrap input[type="submit"]:active {
+    background-color: var(--primary-color-600);
+    border-color: var(--primary-color-600);
+}
+
+hr {
+    width: calc(100% - 32px);
+}
+
+@media only screen and (min-width: 1024px) {
+    .cookiewow-howto-container {
+        flex-flow: row;
+    }
+    .cookiewow-howto-container hr {
+        display: none;
+    }
+}
