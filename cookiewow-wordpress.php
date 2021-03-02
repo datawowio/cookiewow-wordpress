@@ -48,9 +48,17 @@ function cookiewow_admin_menu() {
 	$capability = 'manage_options';
 	$menu_slug  = 'cookiewow-settings';
 	$function   = 'cookiewow_settings_page';
-	$icon_url   = 'dashicons-admin-plugins';
+	$icon_url   = cookiewow_admin_menu_icon();
 	$position   = '25';
 	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+}
+
+/**
+ * Admin menu icon.
+ */
+function cookiewow_admin_menu_icon() {
+	$file_contents = file_get_contents( plugin_dir_path( __FILE__ ) . 'static/images/icon-cookiewow.b64' );
+	return "data:image/svg+xml;base64,$file_contents";
 }
 
 /**
