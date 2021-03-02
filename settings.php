@@ -35,10 +35,10 @@
                 )
             </h3>
             <ol>
-                <li>Add your wordpress domain</li>
+                <li>Add your WordPress domain</li>
                 <li>Go to your domain dashboard and click Customize</li>
                 <li>Copy Banner ID from “Get script” button</li>
-                <li>Paste Banner ID on Wordpress plug-in and click “Save Changes”</li>
+                <li>Paste Banner ID on WordPress plug-in and click “Save Changes”</li>
             </ol>
             <p>Read full instruction
                 <a
