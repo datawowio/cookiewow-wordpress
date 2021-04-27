@@ -8,12 +8,15 @@
  * Plugin Name: Cookie Wow WordPress
  * Plugin URI:  https://cookiewow.com/
  * Description: An easy way to manage cookie consent on web pages.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Cookie Wow
  * Author URI:  https://cookiewow.com/
  * License:     GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+define( 'WP_COOKIEWOW_SLUG', 'cookiewow-settings' );
+define( 'WP_COOKIEWOW_FILE', __FILE__ );
 
 /**
  * Initialize admin settings.
@@ -27,30 +30,28 @@ function cookiewow_admin_init() {
 	$id       = 'cookiewow_setting_section_id';
 	$title    = '';
 	$callback = 'cookiewow_settings_section_description';
-	$page     = 'cookiewow-settings';
-	add_settings_section( $id, $title, $callback, $page );
+
+	add_settings_section( $id, $title, $callback, WP_COOKIEWOW_SLUG );
 
 	$id       = 'cookiewow_token';
 	$title    = 'Cookie Banner ID';
 	$callback = 'cookiewow_settings_fields';
-	$page     = 'cookiewow-settings';
 	$section  = 'cookiewow_setting_section_id';
 	$args     = null;
-	add_settings_field( $id, $title, $callback, $page, $section, $args );
+	add_settings_field( $id, $title, $callback, WP_COOKIEWOW_SLUG, $section, $args );
 }
 
 /**
  * Add admin menu.
  */
-function cookiewow_admin_menu() {
-	$page_title = 'Cookie Wow Settings';
-	$menu_title = 'Cookie Wow';
-	$capability = 'manage_options';
-	$menu_slug  = 'cookiewow-settings';
-	$function   = 'cookiewow_settings_page';
-	$icon_url   = cookiewow_admin_menu_icon();
-	$position   = '25';
-	add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
+function cookiewow_admin_menu () {
+	$parent_slug = 'options-general.php';
+	$page_title  = 'Cookie Wow Settings'; 
+	$menu_title  = 'Cookie Wow';
+	$capability  = 'manage_options';
+	$function    = 'cookiewow_settings_page';
+
+	add_submenu_page($parent_slug, $page_title, $menu_title, $capability, WP_COOKIEWOW_SLUG, $function);
 }
 
 /**
@@ -77,6 +78,17 @@ function cookiewow_settings_fields() {
 		'<input type="text" id="cookiewow_token" name="cookiewow_option[cookiewow_token]" class="regular-text" value="%s" />',
 		isset( $option['cookiewow_token'] ) ? esc_attr( $option['cookiewow_token'] ) : ''
 	);
+}
+
+/**
+ * Link to the configuration page of the plugin & documentation
+ */
+function cookiewow_settings_action_links( $actions ) {
+	array_unshift( $actions, sprintf( '<a href="%s">%s</a>', 'https://help.cookiewow.com/th/?utm_source=wp_plugin&utm_medium=wp_cookiewow', __( 'Docs', 'cookiewow' ) ) );
+
+	array_unshift( $actions, sprintf( '<a href="%s">%s</a>', admin_url( 'options-general.php?page=' . WP_COOKIEWOW_SLUG ), __( 'Settings', 'cookiewow' ) ) );
+
+	return $actions;
 }
 
 /**
@@ -126,7 +138,7 @@ function cookiewow_enqueue_scripts() {
 	}
 
 	$script_name  = 'cookiewow_script';
-	$src          = 'https://script.cookiewow.com/cwc.js';
+	$src          = 'https://cookiecdn.com/cwc.js';
 	$dependencies = array();
 	$version      = null;
 	$in_footer    = false;
@@ -135,7 +147,7 @@ function cookiewow_enqueue_scripts() {
 	$token = esc_attr( $option['cookiewow_token'] );
 
 	$script_name  = 'cookiewow_configs_script';
-	$src          = "https://script.cookiewow.com/configs/{$token}";
+	$src          = "https://cookiecdn.com/configs/{$token}";
 	$dependencies = array();
 	$version      = null;
 	$in_footer    = false;
@@ -173,5 +185,6 @@ add_action( 'admin_init', 'cookiewow_admin_init' );
 add_action( 'admin_menu', 'cookiewow_admin_menu' );
 add_action( 'admin_notices', 'cookiewow_admin_notices' );
 add_action( 'wp_enqueue_scripts', 'cookiewow_enqueue_scripts' );
+add_filter( 'plugin_action_links_' . plugin_basename( WP_COOKIEWOW_FILE ), 'cookiewow_settings_action_links' );
 add_filter( 'script_loader_tag', 'cookiewow_script_loader_tag', $priority = 1, $accepted_args = 3 );
 register_uninstall_hook( __FILE__, 'cookiewow_uninstall' );
