@@ -1,8 +1,8 @@
 <?php
 /**
- * Cookie Wow WordPress
+ * Cookie Wow Banner
  *
- * @package cookiewow-wordpress
+ * @package cookiewow-banner
  */
 
 ?>

@@ -1,14 +1,14 @@
 <?php
 /**
- * Cookie Wow WordPress
+ * Cookie Wow Banner
  *
- * @package cookiewow-wordpress
+ * @package cookiewow-banner
  *
  * @wordpress-plugin
- * Plugin Name: Cookie Wow WordPress
+ * Plugin Name: Cookie Wow Banner
  * Plugin URI:  https://cookiewow.com/
  * Description: An easy way to manage cookie consent on web pages.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      Cookie Wow
  * Author URI:  https://cookiewow.com/
  * License:     GNU General Public License v2 or later
