@@ -6,7 +6,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: Cookie Wow Banner
- * Plugin URI:  https://cookiewow.com/
+ * Plugin URI:  https://github.com/datawowio/cookiewow-wordpress
  * Description: An easy way to manage cookie consent on web pages.
  * Version:     1.1.1
  * Author:      Cookie Wow
@@ -46,7 +46,7 @@ function cookiewow_admin_init() {
  */
 function cookiewow_admin_menu () {
 	$parent_slug = 'options-general.php';
-	$page_title  = 'Cookie Wow Settings'; 
+	$page_title  = 'Cookie Wow Settings';
 	$menu_title  = 'Cookie Wow';
 	$capability  = 'manage_options';
 	$function    = 'cookiewow_settings_page';
