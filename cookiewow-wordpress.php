@@ -8,7 +8,7 @@
  * Plugin Name: Cookie Wow Banner
  * Plugin URI:  https://github.com/datawowio/cookiewow-wordpress
  * Description: An easy way to manage cookie consent on web pages.
- * Version:     1.1.2
+ * Version:     1.1.3
  * Author:      Cookie Wow
  * Author URI:  https://cookiewow.com/
  * License:     GNU General Public License v2 or later
