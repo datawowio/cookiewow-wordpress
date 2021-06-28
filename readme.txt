@@ -27,6 +27,8 @@ View full installation guide >> (https://cookiewow.crisp.help/th/article/cookie-
 
 * Test with 5.7.2
 
+* Use `wp_enqueue_style` to add style to Admin page
+
 = 1.1.2 =
 
 * Change plugin URI to this github repo
