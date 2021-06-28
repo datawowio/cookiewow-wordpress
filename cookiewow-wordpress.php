@@ -44,14 +44,14 @@ function cookiewow_admin_init() {
 /**
  * Add admin menu.
  */
-function cookiewow_admin_menu () {
+function cookiewow_admin_menu() {
 	$parent_slug = 'options-general.php';
 	$page_title  = 'Cookie Wow Settings';
 	$menu_title  = 'Cookie Wow';
 	$capability  = 'manage_options';
 	$function    = 'cookiewow_settings_page';
 
-	add_submenu_page($parent_slug, $page_title, $menu_title, $capability, WP_COOKIEWOW_SLUG, $function);
+	add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, WP_COOKIEWOW_SLUG, $function );
 }
 
 /**
@@ -66,7 +66,7 @@ function cookiewow_admin_menu_icon() {
  * Display a notification when an error occurred in updating settings.
  */
 function cookiewow_admin_notices() {
-	settings_errors();
+	settings_errors( WP_COOKIEWOW_SLUG );
 }
 
 /**
@@ -82,6 +82,8 @@ function cookiewow_settings_fields() {
 
 /**
  * Link to the configuration page of the plugin & documentation
+ *
+ * @param string[] $actions An array of plugin action links.
  */
 function cookiewow_settings_action_links( $actions ) {
 	array_unshift( $actions, sprintf( '<a href="%s">%s</a>', 'https://help.cookiewow.com/th/?utm_source=wp_plugin&utm_medium=wp_cookiewow', __( 'Docs', 'cookiewow' ) ) );
