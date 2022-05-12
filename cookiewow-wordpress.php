@@ -174,7 +174,16 @@ function cookiewow_script_loader_tag( $tag, $script_name, $src ) {
 		$replace_to_position = -1;
 		return substr_replace(
 			$tag,
-			"id='cookieWow' type='text/javascript' src='$src' data-cwcid='$token'></script>",
+			"id='cookieWow' type='text/javascript' src='$src' data-cwcid='$token' data-cfasync='false'></script>",
+			$replace_at_position,
+			$replace_to_position
+		);
+	} elseif ( 'cookiewow_script' === $script_name ) {
+		$replace_at_position = strpos( $tag, 'src' );
+		$replace_to_position = -1;
+		return substr_replace(
+			$tag,
+			"src='$src' data-cfasync='false'></script>",
 			$replace_at_position,
 			$replace_to_position
 		);
