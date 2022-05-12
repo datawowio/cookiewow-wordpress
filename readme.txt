@@ -3,7 +3,7 @@ Contributors: Cookie Wow
 Tags: cookie, PDPA
 Requires at least: 4.9.16
 Tested up to: 5.7.2
-Stable tag: 1.1.3
+Stable tag: 1.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,20 @@ It not only allows you to generate and customize a cookie banner. Cookie Wow aut
 View full installation guide >> (https://cookiewow.crisp.help/th/article/cookie-wow-wordpress-16sumbv/?1614570499387)
 
 == Changelog ==
+
+= 1.1.7 =
+
+* Test with 5.7.2
+
+* Add `data-cfasync` attribute to script tags
+
+= 1.1.5=
+
+* Update readme.txt and assets
+
+= 1.1.4 =
+
+* Update readme.txt and assets
 
 = 1.1.3 =
 
